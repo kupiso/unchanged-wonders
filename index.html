@@ -114,11 +114,13 @@ section{padding:6rem 5vw}
 #services{background:var(--deep)}
 .services-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:4rem;gap:2rem;flex-wrap:wrap}
 .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5px;background:var(--border);border:1px solid var(--border);border-radius:16px;overflow:hidden}
-.service-card{background:var(--card);padding:2.5rem 2rem;transition:background 0.25s;position:relative;overflow:hidden;isolation:isolate}
-.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--orange),transparent);opacity:0;transition:opacity 0.3s}
-.service-card:hover{background:#1a2030}.service-card:hover::before{opacity:1}
-.service-card::after{content:'';position:absolute;inset:0;border-radius:inherit;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,0.04) 45%,rgba(255,255,255,0.08) 50%,rgba(255,255,255,0.04) 55%,transparent 60%);opacity:0;transition:opacity 0.3s;pointer-events:none}
-.service-card:hover::after{opacity:1}
+.service-card{background:var(--card);padding:2.5rem 2rem;transition:all 0.35s;position:relative;overflow:hidden;isolation:isolate;background-size:cover;background-position:center}
+.service-card .svc-bg{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0.18;transition:opacity 0.4s;z-index:-2}
+.service-card:hover .svc-bg{opacity:0.35}
+.service-card .svc-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(22,27,36,0.7) 0%,rgba(22,27,36,0.92) 100%);z-index:-1;transition:background 0.4s}
+.service-card:hover .svc-overlay{background:linear-gradient(180deg,rgba(22,27,36,0.5) 0%,rgba(22,27,36,0.85) 100%)}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--orange),transparent);opacity:0;transition:opacity 0.3s;z-index:1}
+.service-card:hover::before{opacity:1}
 .service-icon{width:52px;height:52px;background:rgba(249,106,0,0.1);border:1px solid rgba(249,106,0,0.2);border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:1.5rem;transition:all 0.3s}
 .service-card:hover .service-icon{background:rgba(249,106,0,0.2);border-color:rgba(249,106,0,0.5);transform:scale(1.05)}
 .service-name{font-family:'Syne',sans-serif;font-size:1.1rem;font-weight:700;margin-bottom:0.75rem;letter-spacing:-0.01em}
