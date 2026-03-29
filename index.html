@@ -275,9 +275,54 @@ footer{background:var(--black);border-top:1px solid var(--border);padding:2.5rem
   .nav-drawer{display:flex}
   .portfolio-grid{grid-template-columns:1fr 1fr}
   #brainCircuit{width:100px;height:100px;bottom:1rem;right:1rem}
+  .container{padding:0 1.2rem}
+  .hero-content{text-align:center}
+  .hero-actions{justify-content:center;flex-wrap:wrap}
+  .hero-badge{justify-content:center}
+  .about-grid{gap:2.5rem}
+  .why-grid{gap:2.5rem}
+  .cta-inner{gap:2.5rem}
+  .cta-left{text-align:center}
+  .cta-left .btn-primary{margin:0 auto}
+  footer{flex-direction:column;text-align:center;gap:1rem}
 }
 @media(max-width:600px){
   .services-grid,.process-grid,.portfolio-grid{grid-template-columns:1fr}
+  .hero-title{font-size:clamp(1.8rem,7vw,2.8rem)!important}
+  .hero-desc{font-size:0.9rem!important}
+  .hero-actions{flex-direction:column;align-items:stretch;gap:0.8rem}
+  .hero-actions .btn-primary,.hero-actions .btn-ghost{width:100%;text-align:center;justify-content:center}
+  .section-title{font-size:clamp(1.5rem,6vw,2.2rem)!important}
+  .section-desc{font-size:0.88rem!important}
+  .about-grid{gap:2rem;margin-top:2rem}
+  .about-card-main{padding:1.5rem}
+  .about-stats-row{gap:1rem}
+  .about-stat-num{font-size:1.3rem}
+  .about-text h2{font-size:clamp(1.5rem,5vw,2rem)!important}
+  .about-text p{font-size:0.88rem}
+  .about-values{justify-content:center}
+  .why-grid{margin-top:2rem;gap:2rem}
+  .why-visual{padding:1.2rem}
+  .metric-row{flex-direction:column;align-items:flex-start;gap:0.4rem}
+  .metric-bar-wrap{width:100%}
+  .cta-inner{gap:2rem}
+  .cta-left h2{font-size:clamp(1.5rem,5vw,2rem)!important}
+  .cta-left p{font-size:0.88rem}
+  .contact-card{padding:1rem}
+  .contact-card-text span{font-size:0.82rem;word-break:break-all}
+  .featured-grid{gap:1.5rem}
+  .feat-card{padding:2rem 1.5rem!important}
+  footer{padding:1.5rem 1.2rem}
+  .footer-copy{font-size:0.75rem}
+  #backToTop{bottom:6rem!important;right:1rem!important;width:40px!important;height:40px!important}
+  #brainCircuit{width:70px;height:70px;bottom:0.5rem;right:0.5rem}
+  .services-header{flex-direction:column;gap:1rem}
+  .container{padding:0 1rem}
+  section{padding:3rem 0!important}
+  .hero{padding-top:5rem!important;padding-bottom:3rem!important}
+  /* Quote modal mobile */
+  #quoteModal>div,#portfolioModal #modalBox{padding:1.5rem!important;border-radius:14px!important}
+  #quoteModal>div form>div:first-child{grid-template-columns:1fr!important}
 }
 </style>
 </head>
